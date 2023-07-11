@@ -9,17 +9,18 @@
 // ComputerChoice
 function getComputerChoice() {
 let value = Math.floor(Math.random() * 3);
-let computerChoice = "";
+let computer = "";
 if (value === 0) {
     alert('I choose Rock');
-    computerChoice = "Rock";    
+    computer = "Rock";    
     } else if (value === 1) {
         alert('I choose Paper');
-        computerChoice = "Paper";
+        computer = "Paper";
         } else {
             alert('I choose Scissor');
-            computerChoice = "Scissor";
+            computer = "Scissor";
             }
+    return computer;        
 } 
 
 // Use string method charAt and slice to make the
@@ -29,12 +30,12 @@ if (value === 0) {
 // PlayerChoice
 function getPlayerChoice() {
    let rawinput = prompt("Write your weapon : Rock, Paper or Scissor.");
-    let playerChoice = rawinput.charAt(0).toUpperCase() + rawinput.slice(1).toLowerCase();
-      if (playerChoice === "Rock") {
+    let player = rawinput.charAt(0).toUpperCase() + rawinput.slice(1).toLowerCase();
+      if (player === "Rock") {
         alert("Player chooses Rock");
-    } else if (playerChoice === "Paper") {
+    } else if (player === "Paper") {
         alert("Player chooses Paper");
-    } else if (playerChoice === "Scissor") {
+    } else if (player === "Scissor") {
         alert("Player chooses Scissor");
     }
 }
@@ -44,8 +45,8 @@ function getPlayerChoice() {
 // Values with respect to player
 
 function round() {
-    getPlayerChoice();
-    getComputerChoice();
+ let playerChoice = getPlayerChoice();
+  let computerChoice  =  getComputerChoice();
 
     if (computerChoice === "Rock") {
         if (playerChoice === "Rock") {
