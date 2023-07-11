@@ -11,13 +11,13 @@ function getComputerChoice() {
 let value = Math.floor(Math.random() * 3);
 let computer = "";
 if (value === 0) {
-    alert('I choose Rock');
+    alert('Computer chooses Rock');
     computer = "Rock";    
     } else if (value === 1) {
-        alert('I choose Paper');
+        alert('Computer chooses Paper');
         computer = "Paper";
         } else {
-            alert('I choose Scissor');
+            alert('Computer chooses Scissor');
             computer = "Scissor";
             }
     return computer;        
@@ -38,6 +38,7 @@ function getPlayerChoice() {
     } else if (player === "Scissor") {
         alert("Player chooses Scissor");
     }
+    return player;
 }
 
 // Single round of game
@@ -45,53 +46,75 @@ function getPlayerChoice() {
 // Values with respect to player
 
 function round() {
+ let score = 0;
+ let wins = score;
+
+ // five rounds of game
+ for(i = 1; i < 6; i++) {
+
+ alert(" Round " + i);
  let playerChoice = getPlayerChoice();
-  let computerChoice  =  getComputerChoice();
+ let computerChoice  =  getComputerChoice();
 
     if (computerChoice === "Rock") {
         if (playerChoice === "Rock") {
-            return 0;
+            score = 0;
+            alert('round ' + i + ' equal');
         } else if (playerChoice === "Paper") {
-            return 1;
+            score = 1;
+            alert('player wins round ' + i);
         } else if (playerChoice === "Scissor") {
-            return -1;
+            score = -1;
+            alert('player loses round ' + i);
         }
     } else if (computerChoice === "Paper") {
         if (playerChoice === "Rock") {
-            return -1;
+            score = -1;
+            alert('player loses round ' + i);
         } else if (playerChoice === "Paper") {
-            return 0;
+            score = 0;
+            alert('round' + i + 'equal');
         } else if (playerChoice === "Scissor") {
-            return 1;
+            score = 1;
+            alert('player wins round ' + i);
         }
     } else if (computerChoice === "Scissor") {
         if (playerChoice === "Rock") {
-            return 1;
+            score = 1;
+            alert('player wins round ' + i);
         } else if (playerChoice === "Paper") {
-            return -1;
+            score = -1;
+            alert('player loses round ' + i);
         } else if (playerChoice === "Scissor") {
-            return 0;
+            score = 0;
+            alert('round ' + i + ' equal');
         }
     }
+    wins += score;
+   }
+   return wins;
 }
 
 // game starts here
-function play() {
+function game() {
 let result = round();
-
+alert("Total Score " + result);
     if (result == 0 ) {
-        alert('sadly noone wins');
-    } else if (result == 1) {
-        alert('winner winner');
-    } else if (result == -1) {
-        alert('game over');
+   alert('sadly noone wins');
+        } else if (result > 0) {
+           alert('winner winner chicken dinner');
+         } else if (result < 0) {
+            alert('game over cuz he is smarter');
+                  }
     }
+
+
+function play() {
+    alert('Rock. Paper & Scissors Game by Aryan')
+    game();
 }
 
-
-
-
-
+play();
 
 
 
