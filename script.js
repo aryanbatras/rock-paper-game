@@ -9,15 +9,16 @@
 // ComputerChoice
 function getComputerChoice() {
 let value = Math.floor(Math.random() * 3);
+let computerChoice = "";
 if (value === 0) {
     alert('I choose Rock');
-    return "Rock";    
+    computerChoice = "Rock";    
     } else if (value === 1) {
         alert('I choose Paper');
-        return "Paper";
+        computerChoice = "Paper";
         } else {
             alert('I choose Scissor');
-            return "Scissor";
+            computerChoice = "Scissor";
             }
 } 
 
@@ -28,15 +29,14 @@ if (value === 0) {
 // PlayerChoice
 function getPlayerChoice() {
    let rawinput = prompt("Write your weapon : Rock, Paper or Scissor.");
-    let input = rawinput.charAt(0).toUpperCase() + rawinput.slice(1).toLowerCase();
-    if (input === "Rock") {
+    let playerChoice = rawinput.charAt(0).toUpperCase() + rawinput.slice(1).toLowerCase();
+      if (playerChoice === "Rock") {
         alert("Player chooses Rock");
-    } else if (input === "Paper") {
+    } else if (playerChoice === "Paper") {
         alert("Player chooses Paper");
-    } else if (input === "Scissor") {
+    } else if (playerChoice === "Scissor") {
         alert("Player chooses Scissor");
     }
-    return input;
 }
 
 // Single round of game
@@ -44,31 +44,31 @@ function getPlayerChoice() {
 // Values with respect to player
 
 function round() {
-   getPlayerChoice();
-   // Stop unless input given
-   getComputerChoice();
-    if (getComputerChoice === "Rock") {
-        if (getPlayerChoice === "Rock") {
+    getPlayerChoice();
+    getComputerChoice();
+
+    if (computerChoice === "Rock") {
+        if (playerChoice === "Rock") {
             return 0;
-        } else if (getPlayerChoice === "Paper") {
+        } else if (playerChoice === "Paper") {
             return 1;
-        } else if (getPlayerChoice === "Scissor") {
+        } else if (playerChoice === "Scissor") {
             return -1;
         }
-    } else if (getComputerChoice === "Paper") {
-        if (getPlayerChoice === "Rock") {
+    } else if (computerChoice === "Paper") {
+        if (playerChoice === "Rock") {
             return -1;
-        } else if (getPlayerChoice === "Paper") {
+        } else if (playerChoice === "Paper") {
             return 0;
-        } else if (getPlayerChoice === "Scissor") {
+        } else if (playerChoice === "Scissor") {
             return 1;
         }
-    } else if (getComputerChoice === "Scissor") {
-        if (getPlayerChoice === "Rock") {
+    } else if (computerChoice === "Scissor") {
+        if (playerChoice === "Rock") {
             return 1;
-        } else if (getPlayerChoice === "Paper") {
+        } else if (playerChoice === "Paper") {
             return -1;
-        } else if (getPlayerChoice === "Scissor") {
+        } else if (playerChoice === "Scissor") {
             return 0;
         }
     }
@@ -76,22 +76,16 @@ function round() {
 
 // game starts here
 function play() {
-    round();
-    if (round == 0 ) {
-        alert('lose');
-        return "sadly noone wins";
-    } else if (round == 1) {
-        alert('win');
-        return "winner winner chicken dinner";
-    } else if (round == -1) {
-        alert('tie');
-        return "computer is smater than you because you lose"; 
+let result = round();
+
+    if (result == 0 ) {
+        alert('sadly noone wins');
+    } else if (result == 1) {
+        alert('winner winner');
+    } else if (result == -1) {
+        alert('game over');
     }
 }
-
-play();
-
-
 
 
 
