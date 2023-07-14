@@ -20,7 +20,7 @@ html, body {
     font-family: 'Rancho', cursive;
     font-weight: 200;
     color: wheat;
-    opacity: 0.8;
+    opacity: 0.75;
     
 }
 
@@ -70,11 +70,14 @@ html, body {
     font-weight: 100;
     font-style: oblique;
     font-size: 22px;
+    color: antiquewhite;
+    opacity: 0.8;
 }
 
 .selector-font:hover {
-    opacity: 0.5;
+    opacity: 1;
     font-weight: 250;
+    color: bisque;
 
 }
 
@@ -82,8 +85,11 @@ html, body {
 .button {
     font-family: Impact, sans-serif;
     text-transform: uppercase;
-    font-weight: 250;
+    font-weight: 300;
     font-size: 22px;
+    background-color: green;
+    border-color: green;
+    color: antiquewhite;
 
     padding: 12px;
     margin-bottom: 50px;
@@ -91,6 +97,7 @@ html, body {
     border-radius: 4px;
     box-shadow: 4px 5px;
 } 
+
 
 .button:hover {
     opacity: 0.75;
@@ -101,6 +108,7 @@ html, body {
     justify-content: center;
     align-items: center;
     padding: 18px;
+    color: mistyrose;
 
     font-family: 'Solitreo', cursive;
     font-size: 32px;
@@ -116,6 +124,7 @@ html, body {
     font-family: 'Solitreo', cursive;
     font-size: 18px;
     font-weight: 500;
+    color: lightyellow;
 
 }
 
@@ -135,4 +144,5 @@ html, body {
 .icon {
     font-size: 24px;
     padding-bottom: 20px;
+    color: bisque;
 }
