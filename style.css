@@ -1,0 +1,138 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+.flex {
+    display:flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.flexone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    font-size: 32px;
+    font-family: 'Rancho', cursive;
+    font-weight: 200;
+    color: wheat;
+    opacity: 0.8;
+    
+}
+
+
+.flexthree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: antiquewhite;
+    background-color: rgb(32, 72, 82);
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Edu TAS Beginner', cursive;
+    
+}
+
+
+
+.flextwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    gap: 5px;
+}
+
+.multiselector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.selector {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+
+
+.selector-font {
+    font-family: 'Mansalva';
+    font-weight: 100;
+    font-style: oblique;
+    font-size: 22px;
+}
+
+.selector-font:hover {
+    opacity: 0.5;
+    font-weight: 250;
+
+}
+
+
+.button {
+    font-family: Impact, sans-serif;
+    text-transform: uppercase;
+    font-weight: 250;
+    font-size: 22px;
+
+    padding: 12px;
+    margin-bottom: 50px;
+
+    border-radius: 4px;
+    box-shadow: 4px 5px;
+} 
+
+.button:hover {
+    opacity: 0.75;
+    font-size: 24px;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+
+    font-family: 'Solitreo', cursive;
+    font-size: 32px;
+    font-weight: 200;
+
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Solitreo', cursive;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+
+
+.img {
+    outline: calc(200px/2) solid #0009;
+    outline-offset: calc(200px/-2);
+    border-radius: 50%;
+    transition: 0.5s;
+  }
+.img:hover {
+    outline: 8px solid yellow;
+    outline-offset: 2px;
+  }
+
+.icon {
+    font-size: 24px;
+    padding-bottom: 20px;
+}
